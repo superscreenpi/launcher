@@ -1,0 +1,43 @@
+name: CI
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+      - name: Build
+        run: |
+          yarn install --frozen-lockfile
+          yarn lint
+          yarn build
+      - uses: actions/upload-artifact@master
+        with:
+          name: launcher
+          path: ./build
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    needs:
+      - build
+    steps:
+      - uses: actions/checkout@v2
+      - name: Provision SSH
+        uses: webfactory/ssh-agent@v0.2.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+      - uses: actions/download-artifact@master
+        with:
+          name: launcher
+          path: ./build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.5.9
+        with:
+          SSH: true
+          BRANCH: gh-pages
+          FOLDER: build
+
