@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import { HomeView } from './views/HomeView';
 import { SettingsView } from './views/SettingsView';
 import { AboutView } from './views/settings/AboutView';
-import {NavBar} from "./views/NavBar";
+import { NavBar } from './views/NavBar';
 
 export const App: React.FC = () => {
   return (
