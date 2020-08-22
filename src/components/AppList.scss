@@ -1,0 +1,58 @@
+.app-list {
+  width: 100vw;
+  overflow-x: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
+
+  .apps-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: min-content;
+    padding: 0 96px;
+
+    .no-apps {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+    }
+
+    .app-badge, .no-apps {
+      @extend .has-background-03dp;
+      width: 240px;
+      height: 240px;
+      border: var(--background) 2px solid;
+      border-radius: 6px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      margin: 36px 1px 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      &.selected {
+        border-color: var(--primary);
+
+        &:before {
+          content: attr(data-appname);
+          height: 30px;
+          position: absolute;
+          top: -30px;
+          left: 0;
+          font-weight: bold;
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}

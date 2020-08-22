@@ -1,2 +1,24 @@
 @import "~@superscreenpi/uikit";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "components/AppList";
+@import "views/HomeView";
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.round.button {
+  display: flex;
+  padding: 6px;
+  height: 36px;
+  width: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
