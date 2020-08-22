@@ -31,6 +31,12 @@ export const initialState: AppsState = {
       iconUrl: 'https://wallet.schmuckli.dev/android-icon-512x512.png',
     },
     {
+      id: 'com.spotify.open',
+      name: 'Spotify',
+      openUrl: 'https://open.spotify.com/?utm_source=pwa_install',
+      iconUrl: 'https://open.scdn.co/cdn/images/icons/Spotify_512.49a0bf03.png',
+    },
+    {
       id: 'com.aliexpress.store',
       name: 'AliExpress',
       openUrl: 'https://m.nl.aliexpress.com',
