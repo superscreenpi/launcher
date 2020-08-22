@@ -6,9 +6,10 @@ import './style.scss';
 import { HashRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { rootReducer } from './store';
+import { initialState, rootReducer } from './store';
+import { persist } from './store/middleware/persist';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, initialState, persist);
 
 ReactDOM.render(
   <React.StrictMode>
