@@ -18,5 +18,11 @@ export const initialState: AppsState = {
       openUrl: 'https://www.chapp.io/dino',
       iconUrl: 'https://www.chapp.io/dino/logo512.png',
     },
+    {
+      id: 'com.aliexpress.store',
+      name: 'AliExpress',
+      openUrl: 'https://m.nl.aliexpress.com',
+      iconUrl: 'https://ae01.alicdn.com/kf/Hf6ec66fcde824896a0e75be02021d64e5.png',
+    },
   ],
 };
