@@ -19,6 +19,18 @@ export const initialState: AppsState = {
       iconUrl: 'https://www.chapp.io/dino/logo512.png',
     },
     {
+      id: 'dev.chrisdiana.calculator',
+      name: 'Calculator',
+      openUrl: 'https://chrisdiana.dev/pwa-calculator/',
+      iconUrl: 'https://chrisdiana.dev/pwa-calculator/img/icons/android-chrome-512x512.png',
+    },
+    {
+      id: 'dev.schmuckli.wallet',
+      name: 'Wallet',
+      openUrl: 'https://wallet.schmuckli.dev/',
+      iconUrl: 'https://wallet.schmuckli.dev/android-icon-512x512.png',
+    },
+    {
       id: 'com.aliexpress.store',
       name: 'AliExpress',
       openUrl: 'https://m.nl.aliexpress.com',
