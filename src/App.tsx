@@ -8,10 +8,10 @@ export const App: React.FC = () => {
   return (
     <>
       <Switch>
-        <Route exact path="/home" component={HomeView}/>
-        <Route exact path="/settings" component={SettingsView}/>
-        <Route exact path="/settings/about" component={AboutView}/>
-        <Redirect to="/home"/>
+        <Route exact path="/home" component={HomeView} />
+        <Route exact path="/settings" component={SettingsView} />
+        <Route exact path="/settings/about" component={AboutView} />
+        <Redirect to="/home" />
       </Switch>
     </>
   );

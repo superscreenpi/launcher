@@ -21,7 +21,7 @@ export const AppList: React.FC = () => {
               }
             }}
           >
-            <img src={iconUrl} alt={name}/>
+            <img src={iconUrl} alt={name} />
           </div>
         ))}
       </div>
