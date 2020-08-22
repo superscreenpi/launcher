@@ -14,7 +14,7 @@ export const SettingsView: React.FC = () => {
   return (
     <>
       <Container>
-        <Link to="/settings" className="round button">
+        <Link to="/" className="round button">
           <i className="fas fa-arrow-left" />
         </Link>
       </Container>

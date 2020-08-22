@@ -1,4 +1,5 @@
 export interface App {
+  id: string;
   name: string;
   openUrl: string;
   // todo: at some point, this should be a list of icons and we should select the correct one
@@ -12,9 +13,10 @@ export interface AppsState {
 export const initialState: AppsState = {
   apps: [
     {
-      name: 'Spotify',
-      openUrl: 'https://open.spotify.com/',
-      iconUrl: 'https://open.scdn.co/cdn/images/icons/Spotify_256.c8416b60.png',
+      id: 'io.chapp.dino',
+      name: 'Dino',
+      openUrl: 'https://www.chapp.io/dino',
+      iconUrl: 'https://www.chapp.io/dino/logo512.png',
     },
   ],
 };
