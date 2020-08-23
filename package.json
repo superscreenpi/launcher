@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
+    "@superscreenpi/redux-persist-localstorage": "^1.0.1",
     "@superscreenpi/uikit": "^0.4.1",
     "@types/babel-plugin-macros": "^2.8.2",
     "@types/luxon": "^1.24.3",

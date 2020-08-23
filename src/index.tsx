@@ -7,9 +7,18 @@ import { HashRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { initialState, rootReducer } from './store';
-import { persist } from './store/middleware/persist';
+import { persist } from '@superscreenpi/redux-persist-localstorage';
 
-const store = createStore(rootReducer, initialState, persist);
+const store = createStore(rootReducer, initialState, persist('launcher/state', ['apps']));
+
+// maintain the correct viewport height
+function resize(): void {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+window.addEventListener('resize', resize);
+window.addEventListener('orientationchange', resize);
 
 ReactDOM.render(
   <React.StrictMode>
