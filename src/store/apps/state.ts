@@ -37,6 +37,18 @@ export const initialState: AppsState = {
       iconUrl: 'https://open.scdn.co/cdn/images/icons/Spotify_512.49a0bf03.png',
     },
     {
+      id: 'com.littlealchemy2',
+      name: 'Little Alchemy 2',
+      openUrl: 'https://littlealchemy2.com/?utm_source=homescreen',
+      iconUrl: 'https://littlealchemy2.com/public/icons/icon-512x512.png',
+    },
+    {
+      id: 'io.github.maxwellito.breaklock',
+      name: 'BreakLock',
+      openUrl: 'https://maxwellito.github.io/breaklock/?utm_source=homescreen',
+      iconUrl: 'https://maxwellito.github.io/breaklock/assets/icons/icon-256x256.png',
+    },
+    {
       id: 'com.aliexpress.store',
       name: 'AliExpress',
       openUrl: 'https://m.nl.aliexpress.com',
