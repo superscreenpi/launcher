@@ -1,9 +1,6 @@
 name: CI
 on: [push]
 
-env:
-  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,6 +18,8 @@ jobs:
           yarn install --frozen-lockfile
           yarn lint
           yarn build
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@master
         with:
           name: launcher
