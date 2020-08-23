@@ -1,16 +1,24 @@
 import React from 'react';
 import { AppList } from '../components/AppList';
-import { Link } from 'react-router-dom';
+import { useGlobal } from '../store';
+import settings from '../images/settings.png';
 
 export const HomeView: React.FC = () => {
+  const apps = useGlobal((state) => state.apps.apps);
+
   return (
     <>
-      <AppList />
-      <div className="menu">
-        <Link className="round button" to="/settings" href="#">
-          <i className="fas fa-cogs" />
-        </Link>
-      </div>
+      <AppList
+        apps={[
+          ...apps,
+          {
+            id: 'io.github.superscreen.launcher.settings',
+            name: 'Settings',
+            openUrl: '/launcher/#/settings',
+            iconUrl: settings,
+          },
+        ]}
+      />
     </>
   );
 };
